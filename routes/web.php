@@ -20,4 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/test','HomeController@test');
-Route::get('/home','HomeController@home');
+
+Route::get('/admin/{any}', function () {
+    return view('test');
+})->where('any', '.*');
+

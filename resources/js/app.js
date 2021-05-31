@@ -14,13 +14,18 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('my-component', require('./components/Mycomponent.vue').default);
 
 Vue.component('test-component', require('./components/TestComponent.vue').default);
+Vue.component('list-post', require('./components/admin/Post/ListPostComponent.vue').default);
+Vue.component('create-post', require('./components/admin/Post/CreatePostComponent.vue').default);
+Vue.component('list-feature', require('./components/admin/Feature/ListFeatureComponent.vue').default);
+Vue.component('list-feature-pack', require('./components/admin/Feature Packs/ListFeaturePackComponent.vue').default);
+Vue.component('main', require('./components/admin/AdminMaster.vue').default);
 
-const routes = [
-    { path: '/example', component: ExampleComponent }
-]
+
+import {routes} from './route.js';
 
 const router = new VueRouter({
-    routes // short for `routes: routes`
+    routes, // short for `routes: routes`
+    mode: 'history'
 })
 
 

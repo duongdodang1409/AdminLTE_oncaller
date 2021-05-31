@@ -15,7 +15,7 @@
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
-<div class="wrapper">
+<div class="wrapper" id="app">
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <!-- Left navbar links -->
@@ -221,13 +221,23 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="../widgets.html" class="nav-link">
+                        <router-link to="/list-post" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
-                                Widgets
-                                <span class="right badge badge-danger">New</span>
+                                Post
+
                             </p>
-                        </a>
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/admin/list-post" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Feature
+
+                            </p>
+                        </router-link>
+
                     </li>
 
                 </ul>
@@ -258,32 +268,23 @@
 
         <!-- Main content -->
         <section class="content">
+{{--            <admin-main></admin-main>--}}
 
-            <!-- Default box -->
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Title</h3>
-
-                    <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                            <i class="fas fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                            <i class="fas fa-times"></i>
-                        </button>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+{{--                        <router-view></router-view>--}}
+                        <list-post></list-post>
                     </div>
                 </div>
-                <div class="card-body">
-                    Start creating your amazing application!
-                </div>
-                <!-- /.card-body -->
-                <div class="card-footer">
-                    Footer
-                </div>
-                <!-- /.card-footer-->
             </div>
-            <!-- /.card -->
-
+{{--            <div class="container-fluid">--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col-md-12">--}}
+{{--                        <create-post></create-post>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </section>
         <!-- /.content -->
     </div>

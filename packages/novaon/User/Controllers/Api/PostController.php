@@ -22,9 +22,9 @@ class PostController extends Controller
 
     public function index(Post $post)
     {
-        $post = Post::all();
-        return ResponseBuilder::success($post, ApiCode::SUCCESS);
-//        return Post::all();
+//        $post = Post::all();
+//        return ResponseBuilder::success($post, ApiCode::SUCCESS);
+        return Post::all();
     }
 
     public function show(Post $post)
